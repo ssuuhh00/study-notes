@@ -6,8 +6,8 @@
 ## 📚 과목
 
 ### [Linear Systems (선형시스템론)](./linear-systems)
-- [`midterm/`](./linear-systems/midterm/index.html) — Ch2~5: convolution, eigen/rank/diagonal, realization, BIBO/internal stability + 과제(HW1~5)
-- [`final/`](./linear-systems/final/index.html) — Ch6~9: controllability/observability, coprime, feedback/observer/tracking, internal model / model matching / pole placement
+- [`midterm/`](./linear-systems/midterm/index.html) — Ch2–5: convolution, eigen/rank/diagonal, realization, BIBO/internal stability + 과제(HW1–5)
+- [`final/`](./linear-systems/final/index.html) — Ch6–9: controllability/observability, coprime, feedback/observer/tracking, internal model / model matching / pole placement
 
 ![선형시스템론 중간고사 대비](docs/screenshots/linear-systems-midterm.png)
 ![선형시스템론 기말고사 대비](docs/screenshots/linear-systems-final.png)
