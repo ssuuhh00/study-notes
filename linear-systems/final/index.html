@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>선형시스템론 인터랙티브 노트 — 강태삼 교수님 기말 대비</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false},{left:'\\(',right:'\\)',display:false},{left:'\\[',right:'\\]',display:true}]});"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">📐</span>
+      <span>선형시스템론 노트 · 기말</span>
+    </div>
+    <div class="meta">
+      <span id="progress-pill">진도 0%</span>
+      <button id="reset-btn" title="진도 초기화">초기화</button>
+      <div id="theme-toggle" class="theme-toggle" role="group" aria-label="테마 전환">
+        <button data-theme-set="light" class="seg">Light</button>
+        <button data-theme-set="dark" class="seg">Dark</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav id="chapter-nav">
+        <div class="nav-section">
+          <h3>0. 시작하기</h3>
+          <a href="#intro" data-page="intro">시험 패턴 & 학습 가이드</a>
+          <a href="#overview" data-page="overview">🗺️ 전체 흐름 한눈에</a>
+          <a href="#glossary-index" data-page="glossary-index">📚 용어 사전 전체</a>
+          <a href="#greek" data-page="greek">🔤 그리스 문자 읽는 법</a>
+        </div>
+        <div class="nav-section">
+          <h3>Ch 6. 가제어성 · 가관측성</h3>
+          <a href="#ch6-controllability" data-page="ch6-controllability">Controllability</a>
+          <a href="#ch6-observability" data-page="ch6-observability">Observability & 쌍대성</a>
+          <a href="#ch6-stabilizable" data-page="ch6-stabilizable">Stabilizable · Detectable · Index</a>
+        </div>
+        <div class="nav-section nav-excluded">
+          <h3>Ch 7. 최소실현 · 서로소분수 <span class="excl-badge">시험 제외</span></h3>
+          <a href="#ch7-coprime" data-page="ch7-coprime">Minimal Realization & Coprimeness</a>
+        </div>
+        <div class="nav-section">
+          <h3>Ch 8. 상태궤환 · 상태추정기</h3>
+          <a href="#ch8-feedback" data-page="ch8-feedback">State Feedback 극배치</a>
+          <a href="#ch8-tracking" data-page="ch8-tracking">Robust Tracking & 적분제어</a>
+          <a href="#ch8-observer" data-page="ch8-observer">State Estimator & Separation</a>
+        </div>
+        <div class="nav-section">
+          <h3>Ch 9. 극배치 · 모델매칭</h3>
+          <a href="#ch9-poleplacement" data-page="ch9-poleplacement">Coprime Fraction 극배치</a>
+          <a href="#ch9-internal-model" data-page="ch9-internal-model">Robust Tracking & Internal Model</a>
+          <a href="#ch9-model-matching" data-page="ch9-model-matching">Model Matching · Total Stability</a>
+        </div>
+        <div class="nav-section">
+          <h3>📝 모의고사</h3>
+          <a href="#exam-1" data-page="exam-1">모의고사 1</a>
+          <a href="#exam-2" data-page="exam-2">모의고사 2</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main id="content">
+      <!-- Pages injected here -->
+    </main>
+  </div>
+
+  <div id="term-backdrop" class="term-backdrop" onclick="window.closeTerm()"></div>
+  <aside id="term-panel" class="term-panel" aria-label="용어 설명 패널">
+    <div class="tp-resize" title="드래그해서 너비 조절"></div>
+    <div class="tp-controls">
+      <button class="tp-back" onclick="window.tpBack()" disabled>← 뒤로</button>
+      <button class="tp-close" onclick="window.closeTerm()" aria-label="닫기">&times;</button>
+    </div>
+    <div class="tp-content"></div>
+  </aside>
+
+  <script src="js/components.js"></script>
+  <script src="js/router.js"></script>
+  <script src="chapters/glossary.js"></script>
+  <script src="chapters/greek.js"></script>
+  <script src="chapters/intro.js"></script>
+  <script src="chapters/overview.js"></script>
+  <script src="chapters/ch6-controllability.js"></script>
+  <script src="chapters/ch6-observability.js"></script>
+  <script src="chapters/ch6-stabilizable.js"></script>
+  <script src="chapters/ch7-coprime.js"></script>
+  <script src="chapters/ch8-feedback.js"></script>
+  <script src="chapters/ch8-tracking.js"></script>
+  <script src="chapters/ch8-observer.js"></script>
+  <script src="chapters/ch9-poleplacement.js"></script>
+  <script src="chapters/ch9-internal-model.js"></script>
+  <script src="chapters/ch9-model-matching.js"></script>
+  <script src="chapters/exam-1.js"></script>
+  <script src="chapters/exam-2.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

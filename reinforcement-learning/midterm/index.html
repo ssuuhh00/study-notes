@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>강화학습개론 중간 대비 — 이수행 교수님</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false},{left:'\\(',right:'\\)',display:false},{left:'\\[',right:'\\]',display:true}]});"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">🎯</span>
+      <span>강화학습개론 중간 대비</span>
+    </div>
+    <div class="meta">
+      <span id="progress-pill">진도 0%</span>
+      <button id="reset-btn" title="진도 초기화">초기화</button>
+      <div id="theme-toggle" class="theme-toggle" role="group" aria-label="테마 전환">
+        <button data-theme-set="light" class="seg">Light</button>
+        <button data-theme-set="dark" class="seg">Dark</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav id="chapter-nav">
+        <div class="nav-section">
+          <h3>시작하기</h3>
+          <a href="#intro" data-page="intro">전체 흐름 · 시험 정보</a>
+        </div>
+        <div class="nav-section">
+          <h3>Ch 1 — 강화학습 기초</h3>
+          <a href="#ch1-rl-basics" data-page="ch1-rl-basics">RL이란 · Agent-Environment</a>
+        </div>
+        <div class="nav-section">
+          <h3>Ch 2 — MDP</h3>
+          <a href="#ch2-mdp" data-page="ch2-mdp">Markov Property → MP → MRP → MDP</a>
+        </div>
+        <div class="nav-section">
+          <h3>Ch 3 — Bellman Equation</h3>
+          <a href="#ch3-bellman" data-page="ch3-bellman">Expectation · Optimal · 0→1→2단계</a>
+        </div>
+        <div class="nav-section">
+          <h3>Ch 4 — Dynamic Programming</h3>
+          <a href="#ch4-dp" data-page="ch4-dp">Policy Iter · Value Iter (MDP 알 때)</a>
+        </div>
+        <div class="nav-section">
+          <h3>Ch 5 — Monte Carlo</h3>
+          <a href="#ch5-mc" data-page="ch5-mc">MC Prediction (에피소드 평균)</a>
+        </div>
+        <div class="nav-section">
+          <h3>Ch 6 — Temporal Difference</h3>
+          <a href="#ch6-td" data-page="ch6-td">TD Prediction · MC vs TD · n-step</a>
+        </div>
+        <div class="nav-section">
+          <h3>Ch 7 — Model-Free Control</h3>
+          <a href="#ch7-control" data-page="ch7-control">MC Control · SARSA · Q-Learning</a>
+        </div>
+        <div class="nav-section">
+          <h3>📝 모의고사</h3>
+          <a href="#exam-1" data-page="exam-1">모의고사 1 — 객관식</a>
+          <a href="#exam-2" data-page="exam-2">모의고사 2 — 서술형 (실전)</a>
+        </div>
+        <div class="nav-section">
+          <h3>📔 용어 사전</h3>
+          <a href="#glossary-index" data-page="glossary-index">전체 용어 한눈에</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main id="content"></main>
+  </div>
+
+  <div id="term-backdrop" class="term-backdrop" onclick="window.closeTerm()"></div>
+  <aside id="term-panel" class="term-panel" aria-label="용어 설명 패널">
+    <div class="tp-resize" title="드래그해서 너비 조절"></div>
+    <div class="tp-controls">
+      <button class="tp-back" onclick="window.tpBack()" disabled>← 뒤로</button>
+      <button class="tp-close" onclick="window.closeTerm()" aria-label="닫기">&times;</button>
+    </div>
+    <div class="tp-content"></div>
+  </aside>
+
+  <script src="js/glossary.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/router.js"></script>
+  <script src="chapters/intro.js"></script>
+  <script src="chapters/ch1-rl-basics.js"></script>
+  <script src="chapters/ch2-mdp.js"></script>
+  <script src="chapters/ch3-bellman.js"></script>
+  <script src="chapters/ch4-dp.js"></script>
+  <script src="chapters/ch5-mc.js"></script>
+  <script src="chapters/ch6-td.js"></script>
+  <script src="chapters/ch7-control.js"></script>
+  <script src="chapters/exam-1.js"></script>
+  <script src="chapters/exam-2.js"></script>
+  <script src="chapters/glossary-index.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

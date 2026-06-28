@@ -1,0 +1,7 @@
+# Copyrighted lecture materials — never commit
+lectures/
+transcripts/
+pdf-text/
+
+# Local tool config
+.claude/

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>선형시스템론 인터랙티브 노트 — 강태삼 교수님 중간 대비</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false},{left:'\\(',right:'\\)',display:false},{left:'\\[',right:'\\]',display:true}]});"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">📐</span>
+      <span>선형시스템론 노트</span>
+    </div>
+    <div class="meta">
+      <span id="progress-pill">진도 0%</span>
+      <button id="reset-btn" title="진도 초기화">초기화</button>
+      <div id="theme-toggle" class="theme-toggle" role="group" aria-label="테마 전환">
+        <button data-theme-set="light" class="seg">Light</button>
+        <button data-theme-set="dark" class="seg">Dark</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav id="chapter-nav">
+        <div class="nav-section">
+          <h3>0. 시작하기</h3>
+          <a href="#intro" data-page="intro">시험 패턴 & 학습 가이드</a>
+          <a href="#glossary-index" data-page="glossary-index">📚 용어 사전 전체</a>
+        </div>
+        <div class="nav-section">
+          <h3>Ch 2. 신호와 시스템</h3>
+          <a href="#ch2-convolution" data-page="ch2-convolution">합성곱(Convolution)</a>
+        </div>
+        <div class="nav-section">
+          <h3>Ch 3. 선형대수</h3>
+          <a href="#ch3-vectorspace" data-page="ch3-vectorspace">Vector Space 기초</a>
+          <a href="#ch3-rank" data-page="ch3-rank">Rank · Null Space · 일반해</a>
+          <a href="#ch3-eigen" data-page="ch3-eigen">Eigenvalue · Eigenvector</a>
+          <a href="#ch3-diagonal" data-page="ch3-diagonal">Diagonalization</a>
+          <a href="#ch3-cayley" data-page="ch3-cayley">Cayley-Hamilton & e^At</a>
+        </div>
+        <div class="nav-section">
+          <h3>Ch 4. 상태공간</h3>
+          <a href="#ch4-realization" data-page="ch4-realization">State-Space Realization</a>
+          <a href="#ch4-solution" data-page="ch4-solution">상태방정식 풀이</a>
+        </div>
+        <div class="nav-section">
+          <h3>Ch 5. 안정도</h3>
+          <a href="#ch5-bibo" data-page="ch5-bibo">BIBO Stability</a>
+          <a href="#ch5-internal" data-page="ch5-internal">Internal · Lyapunov</a>
+        </div>
+        <div class="nav-section">
+          <h3>📝 과제 다시 풀기</h3>
+          <a href="#hw1" data-page="hw1">HW1 — Ch2 신호/시스템</a>
+          <a href="#hw2" data-page="hw2">HW2 — Ch3 선형대수 ①</a>
+          <a href="#hw3" data-page="hw3">HW3 — Ch3 선형대수 ②</a>
+          <a href="#hw4" data-page="hw4">HW4 — Ch4 Realization</a>
+          <a href="#hw5" data-page="hw5">HW5 — Ch5 Stability</a>
+        </div>
+        <div class="nav-section">
+          <h3>📝 모의고사</h3>
+          <a href="#exam-1" data-page="exam-1">모의고사 1</a>
+          <a href="#exam-2" data-page="exam-2">모의고사 2</a>
+        </div>
+      </nav>
+    </aside>
+
+    <main id="content">
+      <!-- Pages injected here -->
+    </main>
+  </div>
+
+  <div id="term-backdrop" class="term-backdrop" onclick="window.closeTerm()"></div>
+  <aside id="term-panel" class="term-panel" aria-label="용어 설명 패널">
+    <div class="tp-resize" title="드래그해서 너비 조절"></div>
+    <div class="tp-controls">
+      <button class="tp-back" onclick="window.tpBack()" disabled>← 뒤로</button>
+      <button class="tp-close" onclick="window.closeTerm()" aria-label="닫기">&times;</button>
+    </div>
+    <div class="tp-content"></div>
+  </aside>
+
+  <script src="js/components.js"></script>
+  <script src="js/router.js"></script>
+  <script src="chapters/glossary.js"></script>
+  <script src="chapters/intro.js"></script>
+  <script src="chapters/ch2-convolution.js"></script>
+  <script src="chapters/ch3-vectorspace.js"></script>
+  <script src="chapters/ch3-rank.js"></script>
+  <script src="chapters/ch3-eigen.js"></script>
+  <script src="chapters/ch3-diagonal.js"></script>
+  <script src="chapters/ch3-cayley.js"></script>
+  <script src="chapters/ch4-realization.js"></script>
+  <script src="chapters/ch4-solution.js"></script>
+  <script src="chapters/ch5-bibo.js"></script>
+  <script src="chapters/ch5-internal.js"></script>
+  <script src="chapters/hw1.js"></script>
+  <script src="chapters/hw2.js"></script>
+  <script src="chapters/hw3.js"></script>
+  <script src="chapters/hw4.js"></script>
+  <script src="chapters/hw5.js"></script>
+  <script src="chapters/exam-1.js"></script>
+  <script src="chapters/exam-2.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
